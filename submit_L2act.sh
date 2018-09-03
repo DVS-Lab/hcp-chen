@@ -5,7 +5,7 @@ for task in WM Emo Soc Gam; do
 
     #Manages the number of jobs and cores
     SCRIPTNAME=L2_${task}_Act.sh
-    NCORES=10
+    NCORES=12
     while [ $(ps -ef | grep -v grep | grep $SCRIPTNAME | wc -l) -ge $NCORES ]; do
       sleep 1m
     done
