@@ -21,8 +21,9 @@ aromaoutput=${OUTPUT}.feat/ICA_AROMA/denoised_func_data_nonaggr.nii.gz
 if [ -e $aromaoutput ]; then
 	exit
 else
-	echo "re-running $subj on $task and run $run"
+	echo "$subj,$task,$run" >> rerunAROMA.csv
 	rm -rf ${OUTPUT}.feat
+	exit
 fi
 
 DATA=${datadir}/tfMRI_${task}_${run}.nii.gz
