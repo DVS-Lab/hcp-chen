@@ -23,7 +23,7 @@ if [ -e $aromaoutput ]; then
 else
 	echo "$subj,$task,$run" >> rerunAROMA.csv
 	rm -rf ${OUTPUT}.feat
-	exit
+	#exit
 fi
 
 DATA=${datadir}/tfMRI_${task}_${run}.nii.gz
